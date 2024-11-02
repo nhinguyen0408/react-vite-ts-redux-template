@@ -1,13 +1,13 @@
-import { Button, ButtonOwnProps } from '@mui/material';
-import { FC, MouseEventHandler } from 'react';
+import { Button, ButtonProps } from '@mui/material';
+import { FC } from 'react';
 
-interface ButtonMUIPropsType extends ButtonOwnProps{
-  onClick: MouseEventHandler<HTMLButtonElement>,
-} // custom additional type
+interface ButtonMUIPropsType extends ButtonProps{
+  // onClick: MouseEventHandler<HTMLButtonElement>,
+}
 
 const ButtonMui: FC<ButtonMUIPropsType> = (props) => {
   return (
-    <Button { ...props }/>
+    <Button color={'primary'} { ...props }/>
   )
 } 
 
